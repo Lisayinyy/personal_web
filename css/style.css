@@ -896,6 +896,70 @@ h4 {
   }
 }
 
+/* Sentiment Analysis Demo Styles */
+.sentiment-analysis-demo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  padding: 20px;
+}
+
+.sentiment-visual {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  text-align: center;
+}
+
+.sentiment-positive,
+.sentiment-neutral,
+.sentiment-negative {
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-size: 0.9em;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.sentiment-positive {
+  background: linear-gradient(135deg, #4CAF50, #66BB6A);
+  color: white;
+  animation: sentiment-pulse 3s ease-in-out infinite;
+}
+
+.sentiment-neutral {
+  background: linear-gradient(135deg, #FF9800, #FFB74D);
+  color: white;
+  animation: sentiment-pulse 3s ease-in-out infinite 1s;
+}
+
+.sentiment-negative {
+  background: linear-gradient(135deg, #F44336, #EF5350);
+  color: white;
+  animation: sentiment-pulse 3s ease-in-out infinite 2s;
+}
+
+@keyframes sentiment-pulse {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 0.8;
+  }
+  50% {
+    transform: scale(1.05);
+    opacity: 1;
+  }
+}
+
+.project-card:hover .sentiment-positive,
+.project-card:hover .sentiment-neutral,
+.project-card:hover .sentiment-negative {
+  transform: scale(1.1);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
 
 
 /*==================== GALLERY ====================*/
