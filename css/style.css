@@ -1076,6 +1076,156 @@ h4 {
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
 }
 
+/* Neural Network Demo Styles */
+.neural-network-demo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+  padding: 20px;
+  position: relative;
+  overflow: hidden;
+}
+
+.network-layers {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 250px;
+  position: relative;
+  z-index: 2;
+}
+
+.layer {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  align-items: center;
+}
+
+.neuron {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #64b5f6, #42a5f5);
+  box-shadow: 0 0 8px rgba(100, 181, 246, 0.5);
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.input-layer .neuron {
+  background: linear-gradient(135deg, #81c784, #66bb6a);
+  box-shadow: 0 0 8px rgba(129, 199, 132, 0.5);
+  animation: input-pulse 3s ease-in-out infinite;
+}
+
+.hidden-layer .neuron {
+  background: linear-gradient(135deg, #ffb74d, #ffa726);
+  box-shadow: 0 0 8px rgba(255, 183, 77, 0.5);
+  animation: hidden-pulse 3s ease-in-out infinite 0.5s;
+}
+
+.output-layer .neuron {
+  background: linear-gradient(135deg, #e57373, #ef5350);
+  box-shadow: 0 0 8px rgba(229, 115, 115, 0.5);
+  animation: output-pulse 3s ease-in-out infinite 1s;
+}
+
+.network-connections {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+}
+
+.network-connections::before,
+.network-connections::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 25%;
+  width: 25%;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(100, 181, 246, 0.6), transparent);
+  animation: data-flow 2s ease-in-out infinite;
+}
+
+.network-connections::after {
+  left: 50%;
+  animation-delay: 0.5s;
+}
+
+@keyframes input-pulse {
+  0%, 100% {
+    transform: scale(1);
+    box-shadow: 0 0 8px rgba(129, 199, 132, 0.5);
+  }
+  50% {
+    transform: scale(1.2);
+    box-shadow: 0 0 15px rgba(129, 199, 132, 0.8);
+  }
+}
+
+@keyframes hidden-pulse {
+  0%, 100% {
+    transform: scale(1);
+    box-shadow: 0 0 8px rgba(255, 183, 77, 0.5);
+  }
+  50% {
+    transform: scale(1.2);
+    box-shadow: 0 0 15px rgba(255, 183, 77, 0.8);
+  }
+}
+
+@keyframes output-pulse {
+  0%, 100% {
+    transform: scale(1);
+    box-shadow: 0 0 8px rgba(229, 115, 115, 0.5);
+  }
+  50% {
+    transform: scale(1.2);
+    box-shadow: 0 0 15px rgba(229, 115, 115, 0.8);
+  }
+}
+
+@keyframes data-flow {
+  0% {
+    opacity: 0;
+    transform: scaleX(0);
+  }
+  50% {
+    opacity: 1;
+    transform: scaleX(1);
+  }
+  100% {
+    opacity: 0;
+    transform: scaleX(0);
+  }
+}
+
+.project-card:hover .neural-network-demo {
+  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 30%, #0f3460 70%, #1a1a2e 100%);
+}
+
+.project-card:hover .neuron {
+  animation-duration: 1.5s;
+}
+
+.project-card:hover .network-connections::before,
+.project-card:hover .network-connections::after {
+  animation-duration: 1s;
+}
+
+
+
+
+
+
+
 
 
 /*==================== GALLERY ====================*/
