@@ -960,6 +960,122 @@ h4 {
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
 
+/* K-Means Clustering Demo Styles */
+.clustering-demo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  padding: 20px;
+}
+
+.cluster-visualization {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  width: 100%;
+  max-width: 200px;
+}
+
+.cluster-group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  position: relative;
+}
+
+.cluster-group::before {
+  content: '';
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  border: 2px solid;
+  background: white;
+  z-index: 2;
+}
+
+.cluster-1::before {
+  border-color: #FF6B6B;
+  animation: cluster-pulse 2s ease-in-out infinite;
+}
+
+.cluster-2::before {
+  border-color: #4ECDC4;
+  animation: cluster-pulse 2s ease-in-out infinite 0.7s;
+}
+
+.cluster-3::before {
+  border-color: #45B7D1;
+  animation: cluster-pulse 2s ease-in-out infinite 1.4s;
+}
+
+.data-point {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+}
+
+.cluster-1 .data-point {
+  background: #FF6B6B;
+  animation: point-movement 3s ease-in-out infinite;
+}
+
+.cluster-2 .data-point {
+  background: #4ECDC4;
+  animation: point-movement 3s ease-in-out infinite 1s;
+}
+
+.cluster-3 .data-point {
+  background: #45B7D1;
+  animation: point-movement 3s ease-in-out infinite 2s;
+}
+
+@keyframes cluster-pulse {
+  0%, 100% {
+    transform: translateX(-50%) scale(1);
+    opacity: 0.7;
+  }
+  50% {
+    transform: translateX(-50%) scale(1.3);
+    opacity: 1;
+  }
+}
+
+@keyframes point-movement {
+  0%, 100% {
+    transform: translateY(0) scale(1);
+    opacity: 0.8;
+  }
+  25% {
+    transform: translateY(-3px) scale(1.1);
+    opacity: 1;
+  }
+  50% {
+    transform: translateY(-1px) scale(0.9);
+    opacity: 0.9;
+  }
+  75% {
+    transform: translateY(-2px) scale(1.05);
+    opacity: 1;
+  }
+}
+
+.project-card:hover .cluster-visualization {
+  transform: scale(1.05);
+}
+
+.project-card:hover .data-point {
+  animation-duration: 1.5s;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
 
 
 /*==================== GALLERY ====================*/
