@@ -50,22 +50,6 @@
 - LinkedIn：[Yuanyuan Yin](https://www.linkedin.com/in/yuanyuan-yin-935186201/)
 - GitHub：[lisayinyy](https://github.com/lisayinyy)
 
-## 📂 文件结构
-
-```
-lisaWeb-main/
-├── index.html          # 主页面
-├── art.html           # 艺术作品页面
-├── css/
-│   └── style.css      # 样式文件
-├── js/
-│   └── script.js      # JavaScript功能
-├── images/            # 图片资源
-│   ├── llll.png      # 头像
-│   ├── p1.JPG-p12.JPG # 艺术作品
-│   └── pj1.png-pj3.png # 项目图片
-└── README.md          # 项目说明
-
 ```
 
 💖 **感谢您访问Lisa的个人网站！** 
