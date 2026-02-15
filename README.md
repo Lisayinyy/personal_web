@@ -8,10 +8,9 @@
 
 ## 👩‍💼 关于Lisa
 
-**Lisa** 是一名即将在UCLA Anderson商学院攻读商业分析硕士学位（MSBA）的研究生，拥有密歇根大学数据科学学士学位和用户体验设计辅修。
+**Lisa** 是一名拥有密歇根大学数据科学学士学位和用户体验设计辅修。
 
 ### 🎓 教育背景
-- **UCLA Anderson School of Management** - Master of Science in Business Analytics (MSBA) | Sep 2025 - Dec 2026
 - **University of Michigan, Ann Arbor** - B.S. in Data Science, Minor in User Experience Design | Sep 2020 - May 2024
 
 ### 🏠 主页 (Home)
