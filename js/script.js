@@ -1,173 +1,181 @@
-document.addEventListener("DOMContentLoaded", function() {
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('visible');
-            } else {
-                entry.target.classList.remove('visible');
-            }
-        });
-    }, {
-        // Use a lower threshold so sections reveal earlier on small screens
-        threshold: 0.1,
-        rootMargin: "0px 0px -10% 0px"
-    });
+/* ============================================================
+   Lisa Yin — Personal Site Scripts
+   ============================================================ */
 
-    document.querySelectorAll('.section').forEach(section => {
-        observer.observe(section);
-    });
+/* ── Nav scroll state ─────────────────────────────────────── */
+(function () {
+  const nav = document.getElementById('site-nav');
+  if (!nav) return;
 
-    // Ensure first section is visible on load in case observer doesn't trigger immediately
-    const firstSection = document.querySelector('.section');
-    if (firstSection) firstSection.classList.add('visible');
-});
-
-/*==================== QUALIFICATION TABS ====================*/
-document.addEventListener("DOMContentLoaded", function() {
-    // Use more specific selectors to avoid conflicts
-    const qualificationButtons = document.querySelectorAll('.qualification__button[data-target]');
-    const qualificationContents = document.querySelectorAll('.qualification__content[data-content]');
-    
-    console.log('Found qualification buttons:', qualificationButtons.length);
-    console.log('Found qualification contents:', qualificationContents.length);
-
-    qualificationButtons.forEach(function(button) {
-        button.addEventListener('click', function(e) {
-            e.preventDefault();
-            e.stopPropagation(); // Prevent event bubbling
-            
-            console.log('Qualification button clicked:', button.dataset.target);
-            
-            const targetId = button.dataset.target;
-            const target = document.querySelector(targetId);
-            console.log('Target found:', !!target, targetId);
-
-            if (target) {
-                // Remove active from all qualification contents
-                qualificationContents.forEach(function(content) {
-                    content.classList.remove('qualification__active');
-                    console.log('Removed active from:', content.id);
-                });
-                
-                // Add active to target content
-                target.classList.add('qualification__active');
-                console.log('Added active to:', target.id);
-
-                // Update button states
-                qualificationButtons.forEach(function(btn) {
-                    btn.classList.remove('qualification__active');
-                });
-                button.classList.add('qualification__active');
-                console.log('Button states updated');
-                
-                // Force display check and lock it
-                setTimeout(function() {
-                    const computedStyle = window.getComputedStyle(target);
-                    console.log('Final display style:', computedStyle.display);
-                    console.log('Final classes:', target.className);
-                    
-                    // Force lock the display
-                    if (target.id === 'work') {
-                        target.style.display = 'block';
-                        target.style.visibility = 'visible';
-                        console.log('Force locked work display');
-                    }
-                }, 50);
-                
-                // Additional check after longer delay
-                setTimeout(function() {
-                    if (target.id === 'work') {
-                        target.style.display = 'block';
-                        target.style.visibility = 'visible';
-                        console.log('Double-checked work display at 200ms');
-                    }
-                }, 200);
-            }
-        });
-    });
-});
-
-/*==================== LIFE ====================*/
-document.addEventListener("DOMContentLoaded", function() {
-  const artBalls = document.querySelectorAll('.art-ball');
-  const skiingBalls = document.querySelectorAll('.skiing-ball');
-
-  artBalls.forEach(ball => {
-    // Randomize movement for art balls
-    const deltaX = Math.random() * 200 - 100;
-    const deltaY = Math.random() * 200 - 100;
-    const scale = 0.8 + Math.random() * 0.4;
-
-    ball.style.animation = `moveBubble 10s linear infinite`;
-    ball.style.transform = `translate(${deltaX}px, ${deltaY}px) scale(${scale})`;
-  });
-
-  skiingBalls.forEach(ball => {
-    // Randomize movement for skiing balls with different pattern
-    const deltaX = Math.random() * 150 - 75;
-    const deltaY = Math.random() * 150 - 75;
-    const scale = 0.9 + Math.random() * 0.3;
-
-    ball.style.animation = `moveSkiingBubble 12s linear infinite`;
-    ball.style.transform = `translate(${deltaX}px, ${deltaY}px) scale(${scale})`;
-  });
-});
-
-/*==================== SCROLL INDICATOR ====================*/
-document.addEventListener("DOMContentLoaded", function() {
-    const scrollIndicator = document.querySelector('.scroll-indicator');
-    const nextSection = document.querySelector('#qualification');
-    
-    if (scrollIndicator && nextSection) {
-        scrollIndicator.addEventListener('click', function() {
-            nextSection.scrollIntoView({
-                behavior: 'smooth',
-                block: 'start'
-            });
-        });
+  function updateNav() {
+    if (window.scrollY > 40) {
+      nav.classList.add('scrolled');
+    } else {
+      nav.classList.remove('scrolled');
     }
-});
+  }
 
-/*==================== PROJECT FILTERING ====================*/
-document.addEventListener("DOMContentLoaded", function() {
-    const categoryBtns = document.querySelectorAll('.category-btn');
-    const projectCards = document.querySelectorAll('.project-card');
-    
-    console.log('Project filter - buttons found:', categoryBtns.length);
-    console.log('Project filter - cards found:', projectCards.length);
+  window.addEventListener('scroll', updateNav, { passive: true });
+  updateNav();
+})();
 
-    // Ensure all cards are visible initially
-    projectCards.forEach(card => {
-        card.style.display = 'block';
-        card.style.opacity = '1';
-        card.style.transform = 'scale(1)';
+
+/* ── Scroll reveal (reveal-section) ──────────────────────── */
+(function () {
+  const targets = document.querySelectorAll('.reveal-section');
+  if (!targets.length) return;
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('in-view');
+          observer.unobserve(entry.target); // fire once
+        }
+      });
+    },
+    { threshold: 0.05, rootMargin: '0px 0px 0px 0px' }
+  );
+
+  targets.forEach((el) => {
+    // If already in viewport (e.g., above fold), reveal immediately
+    const rect = el.getBoundingClientRect();
+    if (rect.top < window.innerHeight && rect.bottom > 0) {
+      el.classList.add('in-view');
+    } else {
+      observer.observe(el);
+    }
+  });
+})();
+
+
+/* ── Journey tabs ─────────────────────────────────────────── */
+(function () {
+  const tabs   = document.querySelectorAll('.jtab');
+  const panels = document.querySelectorAll('.journey-panel');
+  if (!tabs.length) return;
+
+  tabs.forEach((tab) => {
+    tab.addEventListener('click', () => {
+      const target = tab.dataset.panel;
+
+      // Update tabs
+      tabs.forEach((t) => t.classList.remove('active'));
+      tab.classList.add('active');
+
+      // Update panels
+      panels.forEach((p) => {
+        p.classList.toggle('active', p.id === target);
+      });
     });
+  });
+})();
 
-    categoryBtns.forEach(btn => {
-        btn.addEventListener('click', function(e) {
-            e.preventDefault();
-            const targetCategory = this.getAttribute('data-category');
-            console.log('Project category clicked:', targetCategory);
-            
-            // Update active button
-            categoryBtns.forEach(b => b.classList.remove('active'));
-            this.classList.add('active');
-            
-            // Filter projects
-            projectCards.forEach(card => {
-                const cardCategory = card.getAttribute('data-category');
-                console.log('Checking card:', cardCategory, 'against target:', targetCategory);
-                
-                if (targetCategory === 'all' || cardCategory === targetCategory) {
-                    card.style.display = 'block';
-                    card.style.opacity = '1';
-                    card.style.transform = 'scale(1)';
-                    console.log('Showing card:', cardCategory);
-                } else {
-                    card.style.display = 'none';
-                    console.log('Hiding card:', cardCategory);
-                }
-            });
+
+/* ── Project filter ───────────────────────────────────────── */
+(function () {
+  const btns  = document.querySelectorAll('.pfbtn');
+  const cards = document.querySelectorAll('.pcard');
+  if (!btns.length) return;
+
+  btns.forEach((btn) => {
+    btn.addEventListener('click', () => {
+      const cat = btn.dataset.cat;
+
+      // Active state
+      btns.forEach((b) => b.classList.remove('active'));
+      btn.classList.add('active');
+
+      // Show / hide cards
+      cards.forEach((card) => {
+        const match = cat === 'all' || card.dataset.cat === cat;
+        card.classList.toggle('hidden', !match);
+      });
+    });
+  });
+})();
+
+
+/* ── Smooth scroll for in-page anchors ───────────────────── */
+(function () {
+  document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+    anchor.addEventListener('click', (e) => {
+      const id = anchor.getAttribute('href').slice(1);
+      const target = document.getElementById(id);
+      if (!target) return;
+      e.preventDefault();
+      target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    });
+  });
+})();
+
+
+/* ── Stagger timeline items on panel reveal ──────────────── */
+(function () {
+  function staggerPanel(panelId) {
+    const panel = document.getElementById(panelId);
+    if (!panel) return;
+    const items = panel.querySelectorAll('.tl-item');
+    items.forEach((item, i) => {
+      item.style.opacity = '0';
+      item.style.transform = 'translateY(16px)';
+      item.style.transition = `opacity 400ms cubic-bezier(0.25, 1, 0.5, 1) ${i * 60}ms,
+                               transform 400ms cubic-bezier(0.25, 1, 0.5, 1) ${i * 60}ms`;
+      // Trigger
+      requestAnimationFrame(() => {
+        requestAnimationFrame(() => {
+          item.style.opacity = '1';
+          item.style.transform = 'none';
         });
+      });
     });
-});
+  }
+
+  // Stagger on tab click
+  document.querySelectorAll('.jtab').forEach((tab) => {
+    tab.addEventListener('click', () => {
+      staggerPanel(tab.dataset.panel);
+    });
+  });
+
+  // Stagger initial panel when journey section enters view
+  const journeySection = document.getElementById('journey');
+  if (journeySection) {
+    const io = new IntersectionObserver(
+      (entries) => {
+        if (entries[0].isIntersecting) {
+          staggerPanel('edu'); // default active panel
+          io.disconnect();
+        }
+      },
+      { threshold: 0.1 }
+    );
+    io.observe(journeySection);
+  }
+})();
+
+/* ── Horizontal Timeline Interaction ──────────────────────── */
+(function () {
+  const nodes = document.querySelectorAll('.htl-node');
+  const details = document.querySelectorAll('.htl-detail');
+
+  if (!nodes.length) return;
+
+  nodes.forEach((node) => {
+    node.addEventListener('click', () => {
+      const targetId = node.getAttribute('data-detail');
+
+      // Update active node
+      nodes.forEach(n => n.classList.remove('active'));
+      node.classList.add('active');
+
+      // Show corresponding detail card
+      details.forEach(d => d.classList.remove('active'));
+      const target = document.getElementById(targetId);
+      if (target) target.classList.add('active');
+    });
+  });
+
+  // Set first node as active by default
+  if (nodes[0]) nodes[0].classList.add('active');
+})();
