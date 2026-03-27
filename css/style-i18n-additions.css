@@ -1,72 +1,61 @@
-/* ============================================================
-   style-i18n-additions.css
-   New styles for language toggle button — append to style.css
-   ============================================================ */
+/* ── Language Toggle — Slash Design ───────────────────────── */
 
-/* ── Language Toggle Button ────────────────────────────────── */
-#lang-toggle {
-  /* Positioned alongside nav-socials */
-  display: inline-flex;
+.lang-divider {
+  width: 1px;
+  height: 18px;
+  background: rgba(186, 172, 158, 0.4);
+  margin: 0 8px 0 4px;
+}
+
+.lang-switch {
+  display: flex;
   align-items: center;
-  gap: 0.25rem;
-  padding: 0.3rem 0.75rem;
-  border: 1.5px solid var(--ivory-dark);
-  border-radius: 100px;
-  background: transparent;
-  color: var(--muted);
-  font-family: var(--font-body);
-  font-size: 0.78rem;
-  font-weight: 600;
-  letter-spacing: 0.05em;
+  gap: 5px;
   cursor: pointer;
-  transition: color 200ms, border-color 200ms, background 200ms, transform 200ms;
-  white-space: nowrap;
-  line-height: 1;
-  /* Consistent height with social icons */
-  height: 2rem;
   user-select: none;
 }
 
-#lang-toggle::before {
-  content: '🌐';
-  font-size: 0.85em;
+.lang-option {
+  font-size: 13px;
+  letter-spacing: 0.3px;
+  transition: all 0.25s ease;
 }
 
-#lang-toggle:hover {
-  color: var(--terracotta);
-  border-color: var(--terracotta);
-  background: oklch(58% 0.12 38 / 0.06);
-  transform: translateY(-1px);
+.lang-active {
+  color: #3a3330;
+  font-weight: 600;
 }
 
-#lang-toggle:active {
-  transform: translateY(0);
+.lang-inactive {
+  color: #baa89e;
+  font-weight: 400;
 }
 
-/* When scrolled nav is dark-ish, keep button readable */
-.site-nav.scrolled #lang-toggle {
-  border-color: var(--ivory-dark);
+.lang-inactive:hover {
+  color: #c4704b;
 }
 
-/* ── Smooth text transitions on language switch ──────────── */
-[data-i18n] {
-  transition: opacity 160ms ease;
+.lang-slash {
+  color: #baa89e;
+  font-weight: 300;
+  font-size: 13px;
 }
 
-/* Flash effect: briefly fade during switch */
-.lang-switching [data-i18n] {
-  opacity: 0.6;
+/* Scrolled nav state */
+.site-nav.scrolled .lang-divider {
+  background: rgba(186, 172, 158, 0.3);
 }
 
-/* ── Mobile: hide the toggle label, keep globe ───────────── */
-@media screen and (max-width: 600px) {
-  #lang-toggle {
-    padding: 0.3rem 0.55rem;
-    font-size: 0rem;   /* hide text, keep ::before globe */
-    width: 2rem;
-    justify-content: center;
+/* Mobile */
+@media (max-width: 768px) {
+  .lang-switch {
+    gap: 4px;
   }
-  #lang-toggle::before {
-    font-size: 1rem;
+  .lang-option {
+    font-size: 12px;
+  }
+  .lang-divider {
+    height: 14px;
+    margin: 0 4px;
   }
 }
