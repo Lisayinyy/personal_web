@@ -238,11 +238,18 @@ const I18N = {
     // Update <html lang="...">
     document.documentElement.lang = lang;
 
-    // Update toggle button appearance
-    const btn = document.getElementById('lang-toggle');
-    if (btn) {
-      btn.setAttribute('data-current-lang', lang);
-      btn.textContent = dict['lang.toggle'] || (lang === 'en' ? '中文' : 'EN');
+    // Update slash toggle appearance
+    const toggle = document.getElementById('lang-toggle');
+    if (toggle) {
+      toggle.querySelectorAll('.lang-option').forEach(opt => {
+        if (opt.dataset.lang === lang) {
+          opt.classList.add('lang-active');
+          opt.classList.remove('lang-inactive');
+        } else {
+          opt.classList.remove('lang-active');
+          opt.classList.add('lang-inactive');
+        }
+      });
     }
   }
 
@@ -260,9 +267,17 @@ const I18N = {
   function init() {
     applyLang(initLang);
 
-    const btn = document.getElementById('lang-toggle');
-    if (btn) {
-      btn.addEventListener('click', toggleLang);
+    const toggle = document.getElementById('lang-toggle');
+    if (toggle) {
+      toggle.querySelectorAll('.lang-option').forEach(opt => {
+        opt.addEventListener('click', () => {
+          const targetLang = opt.dataset.lang;
+          if (targetLang !== getLang()) {
+            setLang(targetLang);
+            applyLang(targetLang);
+          }
+        });
+      });
     }
   }
 
