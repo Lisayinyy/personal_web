@@ -63,7 +63,7 @@ const I18N = {
     'vibe.step3.title':  'Ship → Measure',
     'vibe.step3.desc':   'Deploy the MVP. Track real user behavior. Use data to decide what stays, what goes, what evolves.',
 
-    'vibe.products-title': 'Products I Vibe Coded',
+    'vibe.products-title': 'Products I Built',
 
     'vibe.card1.tag':    '🔍 Monitoring Tool',
     'vibe.card1.title':  'Xiaohongshu Sentiment Monitor',
@@ -90,6 +90,29 @@ const I18N = {
     'projects.p6.desc':  'SVM-based text sentiment classifier with high accuracy across multiple emotional categories.',
     'projects.p7.desc':  'Convolutional Neural Networks for image classification with advanced training techniques.',
     'projects.p8.desc':  'K-Means with K-Means++ initialization, benchmarked against spectral clustering methods.',
+
+
+    // ── TOOLKIT ──────────────────────────────────────────────
+    'toolkit.claude.note':    '· Code generation',
+    'toolkit.cursor.note':    '· Code editor',
+    'toolkit.openclaw.note':  '· AI assistant',
+    'toolkit.impeccable.note':'· Design',
+    'toolkit.github.note':    '· Deploy',
+
+    // ── RESOURCES ────────────────────────────────────────────
+    'res.title':        '📚 Recommended Resources',
+    'res.1.title':      'Karpathy: Vibe Coding',
+    'res.1.note':       'The origin of it all. Why non-engineers can now build products.',
+    'res.2.title':      'Cursor Quick Start',
+    'res.2.note':       'Follow along and you\'ll be up and running with this AI editor.',
+    'res.3.title':      'My First Vibe Coding Project',
+    'res.3.note':       'A non-technical PM\'s journey from zero to shipped product.',
+    'res.4.title':      'Xiaohongshu Sentiment Monitor',
+    'res.4.note':       'Full project I built, open-sourced from PRD to production.',
+    'res.5.title':      'Prompt Engineering for Code',
+    'res.5.note':       'Practical tips to get better code output from AI.',
+    'res.6.title':      'Web Summary Extension',
+    'res.6.note':       'Chrome extension + LLM API integration in practice.',
 
     // ── RESUME ───────────────────────────────────────────────
     'resume.title':      'Full Resume',
@@ -161,7 +184,7 @@ const I18N = {
     'vibe.step3.title':  'Ship → Measure',
     'vibe.step3.desc':   '上线 MVP，追踪真实用户行为，用数据决定什么留、什么改、什么砍掉。',
 
-    'vibe.products-title': '我 Vibe Coded 的产品',
+    'vibe.products-title': '我做的产品',
 
     'vibe.card1.tag':    '🔍 监控工具',
     'vibe.card1.title':  '小红书舆论监控',
@@ -188,6 +211,29 @@ const I18N = {
     'projects.p6.desc':  '基于 SVM 的文本情感分类器，在多类情绪标签上准确率优异。',
     'projects.p7.desc':  '卷积神经网络图像分类系统，结合高级训练技巧提升性能。',
     'projects.p8.desc':  'K-Means++ 初始化的聚类算法，与谱聚类方法对比基准测试。',
+
+    
+    // ── TOOLKIT ──────────────────────────────────────────────
+    'toolkit.claude.note':    '· 写代码',
+    'toolkit.cursor.note':    '· 编辑器',
+    'toolkit.openclaw.note':  '· AI 助手',
+    'toolkit.impeccable.note':'· 设计',
+    'toolkit.github.note':    '· 部署',
+
+    // ── RESOURCES ────────────────────────────────────────────
+    'res.title':        '📚 推荐资源',
+    'res.1.title':      'Karpathy: Vibe Coding',
+    'res.1.note':       '一切的起源。非程序员也能 build 的理论基础。',
+    'res.2.title':      'Cursor 30分钟入门',
+    'res.2.note':       '跟着做就能上手的 AI 编辑器教程。',
+    'res.3.title':      'PM 的第一个 vibe coding 项目',
+    'res.3.note':       '非技术背景从 0 到 1 的踩坑记录。',
+    'res.4.title':      '小红书舆情监控系统',
+    'res.4.note':       '我做的完整项目，PRD 到上线全开源。',
+    'res.5.title':      'Prompt Engineering for Code',
+    'res.5.note':       '让 AI 写出更好代码的实用技巧。',
+    'res.6.title':      'Web Summary 浏览器插件',
+    'res.6.note':       'Chrome 插件 + LLM API 集成实战。',
 
     // ── RESUME ───────────────────────────────────────────────
     'resume.title':      '完整简历',
