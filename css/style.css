@@ -1607,3 +1607,27 @@ header {
     grid-template-columns: repeat(2, 1fr);
   }
 }
+
+
+/* ── Vibe Section Divider ─────────────────────────────────── */
+.vibe-section-divider {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(186,172,158,0.3), transparent);
+  margin: 48px 0;
+}
+
+/* ── Shipped Header ───────────────────────────────────────── */
+.vibe-shipped-header {
+  margin-bottom: 28px;
+}
+.vibe-shipped-title {
+  font-family: 'Fraunces', serif;
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+.vibe-shipped-sub {
+  font-size: 15px;
+  color: #8a7e76;
+  line-height: 1.5;
+}
