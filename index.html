@@ -8,7 +8,22 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,300;1,9..144,400&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style-i18n-additions.css">
   <script src="https://kit.fontawesome.com/55d23dab72.js" crossorigin="anonymous"></script>
+
+  <!--
+    Anti-flash: load i18n translations synchronously BEFORE body renders.
+    We inline a minimal script to read localStorage and inject a class
+    so the CSS can hide content until translations are applied.
+  -->
+  <script>
+    (function () {
+      var lang = localStorage.getItem('lisa-lang') || 'en';
+      if (lang !== 'en') {
+        document.documentElement.setAttribute('data-lang', lang);
+      }
+    })();
+  </script>
 </head>
 <body>
 
@@ -17,15 +32,17 @@
     <div class="nav-inner">
       <a class="nav-logo" href="#home">LY</a>
       <div class="nav-links">
-        <a href="#journey">AI Journey</a>
-        <a href="#vibe-coding">Vibe Coding</a>
-        <a href="#projects">Projects</a>
-        <a href="#resume">Resume</a>
+        <a href="#journey"      data-i18n="nav.journey">AI Journey</a>
+        <a href="#vibe-coding"  data-i18n="nav.vibe-coding">Vibe Coding</a>
+        <a href="#projects"     data-i18n="nav.projects">Projects</a>
+        <a href="#resume"       data-i18n="nav.resume">Resume</a>
       </div>
       <div class="nav-socials">
         <a href="mailto:lisayyyin@gmail.com" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
         <a href="https://www.linkedin.com/in/yuanyuan-yin-935186201/" target="_blank" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
         <a href="https://github.com/lisayyy89" target="_blank" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+        <!-- Language toggle -->
+        <button id="lang-toggle" aria-label="Switch language" data-current-lang="en">中文</button>
       </div>
     </div>
   </nav>
@@ -41,12 +58,12 @@
 
     <div class="hero-text-col">
       <p class="hero-eyebrow reveal-up" style="--d:0ms">AI Product Manager · MiniMax</p>
-      <h1 class="hero-headline reveal-up" style="--d:80ms">
+      <h1 class="hero-headline reveal-up" style="--d:80ms" data-i18n="hero.headline" data-i18n-html>
         I ship AI products<br>
-        <em>& vibe code</em><br>
+        <em>&amp; vibe code</em><br>
         my own tools.
       </h1>
-      <p class="hero-tagline reveal-up" style="--d:200ms">
+      <p class="hero-tagline reveal-up" style="--d:200ms" data-i18n="hero.tagline">
         AI PM who actually builds — from product strategy to vibe coding prototypes with LLMs. Data-driven, design-minded, code-capable.
       </p>
       <div class="hero-chips reveal-up" style="--d:320ms">
@@ -55,7 +72,7 @@
         <span class="chip">Data Science</span>
         <span class="chip">UX Design</span>
       </div>
-      <a href="#journey" class="hero-cta reveal-up" style="--d:420ms">
+      <a href="#journey" class="hero-cta reveal-up" style="--d:420ms" data-i18n="hero.cta" data-i18n-html>
         My Story <i class="fa-solid fa-arrow-down"></i>
       </a>
     </div>
@@ -89,17 +106,17 @@
   <section id="journey" class="journey-section reveal-section">
     <div class="section-header">
       <span class="section-number">01</span>
-      <h2 class="section-title">My Journey with AI</h2>
+      <h2 class="section-title" data-i18n="journey.section-title">My Journey with AI</h2>
     </div>
-    <p class="journey-intro">我学的，做的，踩的坑。跟着这条时间线走一遍，你也能入门 AI。</p>
+    <p class="journey-intro" data-i18n="journey.intro">我学的，做的，踩的坑。跟着这条时间线走一遍，你也能入门 AI。</p>
 
     <!-- Horizontal Timeline -->
     <div class="htl-wrapper">
       <!-- Phase Bar -->
       <div class="htl-phases">
-        <div class="htl-phase htl-phase--1">第一阶段<br><span>AI 基础</span></div>
-        <div class="htl-phase htl-phase--2">第二阶段<br><span>Vibe Coding</span></div>
-        <div class="htl-phase htl-phase--3">第三阶段<br><span>AI PM</span></div>
+        <div class="htl-phase htl-phase--1" data-i18n="journey.phase1" data-i18n-html>第一阶段<br><span>AI 基础</span></div>
+        <div class="htl-phase htl-phase--2" data-i18n="journey.phase2" data-i18n-html>第二阶段<br><span>Vibe Coding</span></div>
+        <div class="htl-phase htl-phase--3" data-i18n="journey.phase3" data-i18n-html>第三阶段<br><span>AI PM</span></div>
       </div>
 
       <!-- Timeline Track -->
@@ -149,10 +166,10 @@
     <div class="htl-details">
       <div class="htl-detail active" id="detail-1">
         <div class="htl-detail-header">
-          <span class="htl-detail-date">2020 – 2024</span>
-          <h3>密歇根大学 · 数据科学</h3>
+          <span class="htl-detail-date" data-i18n="journey.d1.date">2020 – 2024</span>
+          <h3 data-i18n="journey.d1.title">密歇根大学 · 数据科学</h3>
         </div>
-        <p>学了 ML、Deep Learning、Computer Vision、SQL。UX Design 辅修让我开始从用户角度思考 AI 产品。</p>
+        <p data-i18n="journey.d1.desc">学了 ML、Deep Learning、Computer Vision、SQL。UX Design 辅修让我开始从用户角度思考 AI 产品。</p>
         <div class="htl-detail-tags">
           <span>Python</span><span>ML</span><span>Deep Learning</span><span>UX Design</span>
         </div>
@@ -163,10 +180,10 @@
 
       <div class="htl-detail" id="detail-2">
         <div class="htl-detail-header">
-          <span class="htl-detail-date">2022 夏</span>
-          <h3>AI4ALL@BU · AI 研究</h3>
+          <span class="htl-detail-date" data-i18n="journey.d2.date">2022 夏</span>
+          <h3 data-i18n="journey.d2.title">AI4ALL@BU · AI 研究</h3>
         </div>
-        <p>第一次做 AI 研究项目。意识到 AI 不应该只待在论文里，开始想怎么做成产品。</p>
+        <p data-i18n="journey.d2.desc">第一次做 AI 研究项目。意识到 AI 不应该只待在论文里，开始想怎么做成产品。</p>
         <div class="htl-detail-tags">
           <span>AI Research</span><span>NLP</span><span>Paper</span>
         </div>
@@ -174,10 +191,10 @@
 
       <div class="htl-detail" id="detail-3">
         <div class="htl-detail-header">
-          <span class="htl-detail-date">2024</span>
-          <h3>第一次用 ChatGPT 写代码</h3>
+          <span class="htl-detail-date" data-i18n="journey.d3.date">2024</span>
+          <h3 data-i18n="journey.d3.title">第一次用 ChatGPT 写代码</h3>
         </div>
-        <p>做毕设的时候第一次用 GPT 辅助写代码，效率直接翻倍。从此入坑 AI-assisted coding。</p>
+        <p data-i18n="journey.d3.desc">做毕设的时候第一次用 GPT 辅助写代码，效率直接翻倍。从此入坑 AI-assisted coding。</p>
         <div class="htl-detail-tags">
           <span>ChatGPT</span><span>AI Coding</span><span>毕设项目</span>
         </div>
@@ -185,10 +202,10 @@
 
       <div class="htl-detail" id="detail-4">
         <div class="htl-detail-header">
-          <span class="htl-detail-date">2025.2</span>
-          <h3>🔥 开始 Vibe Coding</h3>
+          <span class="htl-detail-date" data-i18n="journey.d4.date">2025.2</span>
+          <h3 data-i18n="journey.d4.title">🔥 开始 Vibe Coding</h3>
         </div>
-        <p>Karpathy 提出 vibe coding 概念。开始用 Claude Code + Cursor 全面 AI 辅助编程，非开发背景也能做产品了。</p>
+        <p data-i18n="journey.d4.desc">Karpathy 提出 vibe coding 概念。开始用 Claude Code + Cursor 全面 AI 辅助编程，非开发背景也能做产品了。</p>
         <div class="htl-detail-tags">
           <span>Claude Code</span><span>Cursor</span><span>Vibe Coding</span>
         </div>
@@ -196,10 +213,10 @@
 
       <div class="htl-detail" id="detail-5">
         <div class="htl-detail-header">
-          <span class="htl-detail-date">2025.4 – 2025.9</span>
-          <h3>AI 投资人 · 真格 → 奇绩</h3>
+          <span class="htl-detail-date" data-i18n="journey.d5.date">2025.4 – 2025.9</span>
+          <h3 data-i18n="journey.d5.title">AI 投资人 · 真格 → 奇绩</h3>
         </div>
-        <p>看了 100+ AI 创业项目，搞懂了 LLM 基建、多模态、垂直应用的投资逻辑。知道什么是好的 AI 产品。</p>
+        <p data-i18n="journey.d5.desc">看了 100+ AI 创业项目，搞懂了 LLM 基建、多模态、垂直应用的投资逻辑。知道什么是好的 AI 产品。</p>
         <div class="htl-detail-tags">
           <span>AI Investment</span><span>100+ Startups</span><span>PMF</span>
         </div>
@@ -207,10 +224,10 @@
 
       <div class="htl-detail" id="detail-6">
         <div class="htl-detail-header">
-          <span class="htl-detail-date">2025.9</span>
-          <h3>加入 MiniMax · AI PM</h3>
+          <span class="htl-detail-date" data-i18n="journey.d6.date">2025.9</span>
+          <h3 data-i18n="journey.d6.title">加入 MiniMax · AI PM</h3>
         </div>
-        <p>从投资转产品。开始用 vibe coding 做内部工具——小红书舆情监控、增长自动化。AI PM 不只写 PRD，还自己 build。</p>
+        <p data-i18n="journey.d6.desc">从投资转产品。开始用 vibe coding 做内部工具——小红书舆情监控、增长自动化。AI PM 不只写 PRD，还自己 build。</p>
         <div class="htl-detail-tags">
           <span>MiniMax</span><span>Product Growth</span><span>OpenClaw</span>
         </div>
@@ -218,10 +235,10 @@
 
       <div class="htl-detail" id="detail-7">
         <div class="htl-detail-header">
-          <span class="htl-detail-date">Now · 2026</span>
-          <h3>Shipping & Building 🚀</h3>
+          <span class="htl-detail-date" data-i18n="journey.d7.date">Now · 2026</span>
+          <h3 data-i18n="journey.d7.title">Shipping &amp; Building 🚀</h3>
         </div>
-        <p>每周 vibe code 新工具，把 AI 产品增长方法论写成笔记分享。目标：让更多非技术背景的人也能用 AI 做产品。</p>
+        <p data-i18n="journey.d7.desc">每周 vibe code 新工具，把 AI 产品增长方法论写成笔记分享。目标：让更多非技术背景的人也能用 AI 做产品。</p>
         <div class="htl-detail-tags">
           <span>Vibe Coding</span><span>AI Growth</span><span>Content</span>
         </div>
@@ -239,57 +256,57 @@
       <span class="section-number">02</span>
       <h2 class="section-title">Vibe Coding</h2>
     </div>
-    <p class="vibe-intro">I don't just write PRDs — I build prototypes myself using AI-assisted coding. Here's what happens when a PM picks up the terminal.</p>
+    <p class="vibe-intro" data-i18n="vibe.intro">I don't just write PRDs — I build prototypes myself using AI-assisted coding. Here's what happens when a PM picks up the terminal.</p>
 
     <div class="vibe-process">
       <div class="vibe-step">
         <div class="vibe-step-num">01</div>
         <div class="vibe-step-content">
-          <h3>Idea → PRD</h3>
-          <p>Start with a user problem. Write a quick PRD with AI to clarify scope, constraints, and success metrics.</p>
+          <h3 data-i18n="vibe.step1.title">Idea → PRD</h3>
+          <p data-i18n="vibe.step1.desc">Start with a user problem. Write a quick PRD with AI to clarify scope, constraints, and success metrics.</p>
         </div>
       </div>
       <div class="vibe-step">
         <div class="vibe-step-num">02</div>
         <div class="vibe-step-content">
-          <h3>Prompt → Prototype</h3>
-          <p>Feed the PRD to Claude/MiniMax. Iterate with natural language — describe what you want, review the code, refine.</p>
+          <h3 data-i18n="vibe.step2.title">Prompt → Prototype</h3>
+          <p data-i18n="vibe.step2.desc">Feed the PRD to Claude/MiniMax. Iterate with natural language — describe what you want, review the code, refine.</p>
         </div>
       </div>
       <div class="vibe-step">
         <div class="vibe-step-num">03</div>
         <div class="vibe-step-content">
-          <h3>Ship → Measure</h3>
-          <p>Deploy the MVP. Track real user behavior. Use data to decide what stays, what goes, what evolves.</p>
+          <h3 data-i18n="vibe.step3.title">Ship → Measure</h3>
+          <p data-i18n="vibe.step3.desc">Deploy the MVP. Track real user behavior. Use data to decide what stays, what goes, what evolves.</p>
         </div>
       </div>
     </div>
 
-    <h3 class="vibe-products-title">Products I Vibe Coded</h3>
+    <h3 class="vibe-products-title" data-i18n="vibe.products-title">Products I Vibe Coded</h3>
     <div class="vibe-grid">
 
       <a href="https://github.com/Lisayinyy/xiaohongshu-public-monitor" target="_blank" class="vibe-card">
-        <div class="vibe-card-tag">🔍 监控工具</div>
-        <h4>小红书舆论监控</h4>
-        <p>自动搜索 → 详情页抓取 → 智能筛选 → 生成评论话术 → 写入飞书表格。3层去AI味流水线，越用越像真人。</p>
+        <div class="vibe-card-tag" data-i18n="vibe.card1.tag">🔍 监控工具</div>
+        <h4 data-i18n="vibe.card1.title">小红书舆论监控</h4>
+        <p data-i18n="vibe.card1.desc">自动搜索 → 详情页抓取 → 智能筛选 → 生成评论话术 → 写入飞书表格。3层去AI味流水线，越用越像真人。</p>
         <div class="vibe-stack">
           <span>OpenClaw</span><span>Browser Automation</span><span>Feishu API</span>
         </div>
       </a>
 
       <a href="https://github.com/Lisayinyy/web_summary_assistant" target="_blank" class="vibe-card">
-        <div class="vibe-card-tag">🧠 浏览器插件</div>
-        <h4>Web Summary Assistant</h4>
-        <p>AI 驱动的网页摘要工具，一键总结长文，提升阅读效率。Chrome Extension + LLM API 集成。</p>
+        <div class="vibe-card-tag" data-i18n="vibe.card2.tag">🧠 浏览器插件</div>
+        <h4 data-i18n="vibe.card2.title">Web Summary Assistant</h4>
+        <p data-i18n="vibe.card2.desc">AI 驱动的网页摘要工具，一键总结长文，提升阅读效率。Chrome Extension + LLM API 集成。</p>
         <div class="vibe-stack">
           <span>JavaScript</span><span>Chrome Extension</span><span>AI API</span>
         </div>
       </a>
 
       <a href="https://lisayinyy.github.io/personal_web/" target="_blank" class="vibe-card">
-        <div class="vibe-card-tag">🎨 个人网站</div>
-        <h4>This Website</h4>
-        <p>你正在看的这个网站就是 vibe coded 的。用 Claude + Impeccable 设计规范，从零到部署全程 AI 辅助。</p>
+        <div class="vibe-card-tag" data-i18n="vibe.card3.tag">🎨 个人网站</div>
+        <h4 data-i18n="vibe.card3.title">This Website</h4>
+        <p data-i18n="vibe.card3.desc">你正在看的这个网站就是 vibe coded 的。用 Claude + Impeccable 设计规范，从零到部署全程 AI 辅助。</p>
         <div class="vibe-stack">
           <span>HTML/CSS/JS</span><span>Impeccable</span><span>GitHub Pages</span>
         </div>
@@ -306,9 +323,9 @@
     </div>
 
     <div class="project-filter">
-      <button class="pfbtn active" data-cat="all">All</button>
-      <button class="pfbtn" data-cat="coding">Engineering</button>
-      <button class="pfbtn" data-cat="design">Design</button>
+      <button class="pfbtn active" data-cat="all"    data-i18n="projects.filter.all">All</button>
+      <button class="pfbtn"        data-cat="coding" data-i18n="projects.filter.coding">Engineering</button>
+      <button class="pfbtn"        data-cat="design" data-i18n="projects.filter.design">Design</button>
     </div>
 
     <div class="project-grid">
@@ -322,7 +339,7 @@
         <div class="pcard-body">
           <span class="pcard-tag">Development</span>
           <h3 class="pcard-title">Personal Website</h3>
-          <p class="pcard-desc">Responsive personal site with interactive animations, built in pure HTML/CSS/JS.</p>
+          <p class="pcard-desc" data-i18n="projects.p1.desc">Responsive personal site with interactive animations, built in pure HTML/CSS/JS.</p>
           <div class="pcard-techs">
             <span>HTML/CSS</span><span>JavaScript</span><span>Responsive</span>
           </div>
@@ -338,7 +355,7 @@
         <div class="pcard-body">
           <span class="pcard-tag">AI Extension</span>
           <h3 class="pcard-title">Web Summary Assistant</h3>
-          <p class="pcard-desc">AI-powered browser extension that summarises pages for faster reading and research.</p>
+          <p class="pcard-desc" data-i18n="projects.p2.desc">AI-powered browser extension that summarises pages for faster reading and research.</p>
           <div class="pcard-techs">
             <span>JavaScript</span><span>AI Integration</span><span>Chrome Extension</span>
           </div>
@@ -354,7 +371,7 @@
         <div class="pcard-body">
           <span class="pcard-tag design">UI/UX</span>
           <h3 class="pcard-title">MiLastBite App Design</h3>
-          <p class="pcard-desc">Full mobile UX for a food-waste reduction platform — research, wireframes, interactive prototype.</p>
+          <p class="pcard-desc" data-i18n="projects.p3.desc">Full mobile UX for a food-waste reduction platform — research, wireframes, interactive prototype.</p>
           <div class="pcard-techs">
             <span>User Research</span><span>Prototyping</span><span>Mobile Design</span>
           </div>
@@ -370,7 +387,7 @@
         <div class="pcard-body">
           <span class="pcard-tag design">Research</span>
           <h3 class="pcard-title">BLICK Web Accessibility</h3>
-          <p class="pcard-desc">Accessibility audit and redesign for an e-commerce art supply site, making it usable for everyone.</p>
+          <p class="pcard-desc" data-i18n="projects.p4.desc">Accessibility audit and redesign for an e-commerce art supply site, making it usable for everyone.</p>
           <div class="pcard-techs">
             <span>Accessibility</span><span>UX Research</span><span>Web Design</span>
           </div>
@@ -386,7 +403,7 @@
         <div class="pcard-body">
           <span class="pcard-tag">Machine Learning</span>
           <h3 class="pcard-title">Collision Warning System</h3>
-          <p class="pcard-desc">Real-time vehicle detection using YOLO for collision prevention in autonomous driving.</p>
+          <p class="pcard-desc" data-i18n="projects.p5.desc">Real-time vehicle detection using YOLO for collision prevention in autonomous driving.</p>
           <div class="pcard-techs">
             <span>YOLO</span><span>Computer Vision</span><span>Python</span>
           </div>
@@ -406,7 +423,7 @@
         <div class="pcard-body">
           <span class="pcard-tag">Data Science</span>
           <h3 class="pcard-title">Sentiment Analysis — SVM</h3>
-          <p class="pcard-desc">SVM-based text sentiment classifier with high accuracy across multiple emotional categories.</p>
+          <p class="pcard-desc" data-i18n="projects.p6.desc">SVM-based text sentiment classifier with high accuracy across multiple emotional categories.</p>
           <div class="pcard-techs">
             <span>Python</span><span>SVM</span><span>Scikit-learn</span>
           </div>
@@ -434,7 +451,7 @@
         <div class="pcard-body">
           <span class="pcard-tag">Deep Learning</span>
           <h3 class="pcard-title">CNN Classification System</h3>
-          <p class="pcard-desc">Convolutional Neural Networks for image classification with advanced training techniques.</p>
+          <p class="pcard-desc" data-i18n="projects.p7.desc">Convolutional Neural Networks for image classification with advanced training techniques.</p>
           <div class="pcard-techs">
             <span>PyTorch</span><span>CNN</span><span>Computer Vision</span>
           </div>
@@ -460,7 +477,7 @@
         <div class="pcard-body">
           <span class="pcard-tag">Machine Learning</span>
           <h3 class="pcard-title">K-Means Clustering</h3>
-          <p class="pcard-desc">K-Means with K-Means++ initialization, benchmarked against spectral clustering methods.</p>
+          <p class="pcard-desc" data-i18n="projects.p8.desc">K-Means with K-Means++ initialization, benchmarked against spectral clustering methods.</p>
           <div class="pcard-techs">
             <span>Python</span><span>NumPy</span><span>Matplotlib</span>
           </div>
@@ -475,14 +492,14 @@
     <div class="resume-inner">
       <div class="resume-text">
         <span class="section-number">05</span>
-        <h2 class="section-title">Full Resume</h2>
-        <p>Want the complete picture? Download my CV for detailed work experience, education, and skills.</p>
+        <h2 class="section-title" data-i18n="resume.title">Full Resume</h2>
+        <p data-i18n="resume.desc">Want the complete picture? Download my CV for detailed work experience, education, and skills.</p>
       </div>
       <div class="resume-actions">
-        <a href="./images/Lisa_Yin_Resume.pdf" target="_blank" class="resume-btn">
+        <a href="./images/Lisa_Yin_Resume.pdf" target="_blank" class="resume-btn" data-i18n="resume.download" data-i18n-html>
           <i class="fa-solid fa-file-pdf"></i> Download CV
         </a>
-        <a href="https://www.linkedin.com/in/yuanyuan-yin-935186201/" target="_blank" class="resume-btn resume-btn--outline">
+        <a href="https://www.linkedin.com/in/yuanyuan-yin-935186201/" target="_blank" class="resume-btn resume-btn--outline" data-i18n="resume.linkedin" data-i18n-html>
           <i class="fa-brands fa-linkedin"></i> LinkedIn
         </a>
       </div>
@@ -493,16 +510,17 @@
   <footer class="site-footer">
     <div class="footer-inner">
       <p class="footer-name">Yuanyuan (Lisa) Yin</p>
-      <p class="footer-loc">Los Angeles, CA</p>
+      <p class="footer-loc" data-i18n="footer.loc">Los Angeles, CA</p>
       <div class="footer-links">
         <a href="mailto:lisayyyin@gmail.com">lisayyyin@gmail.com</a>
         <a href="https://www.linkedin.com/in/yuanyuan-yin-935186201/" target="_blank">LinkedIn</a>
         <a href="https://github.com/lisayyy89" target="_blank">GitHub</a>
       </div>
-      <p class="footer-copy">© 2025 Lisa Yin</p>
+      <p class="footer-copy" data-i18n="footer.copy">© 2025 Lisa Yin</p>
     </div>
   </footer>
 
   <script src="js/script.js"></script>
+  <script src="js/i18n.js"></script>
 </body>
 </html>
