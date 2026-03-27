@@ -63,7 +63,8 @@ const I18N = {
     'vibe.step3.title':  'Ship → Measure',
     'vibe.step3.desc':   'Deploy the MVP. Track real user behavior. Use data to decide what stays, what goes, what evolves.',
 
-    'vibe.products-title': 'Products I Built',
+    'vibe.products-title': 'What I Shipped 🚀',
+    'vibe.products-sub':   'Real products, built from scratch with AI-assisted coding.',
 
     'vibe.card1.tag':    '🔍 Monitoring Tool',
     'vibe.card1.title':  'Xiaohongshu Sentiment Monitor',
@@ -184,7 +185,8 @@ const I18N = {
     'vibe.step3.title':  'Ship → Measure',
     'vibe.step3.desc':   '上线 MVP，追踪真实用户行为，用数据决定什么留、什么改、什么砍掉。',
 
-    'vibe.products-title': '我做的产品',
+    'vibe.products-title': '我做的产品 🚀',
+    'vibe.products-sub':   '真实产品，从零开始用 AI 辅助编程打造。',
 
     'vibe.card1.tag':    '🔍 监控工具',
     'vibe.card1.title':  '小红书舆论监控',
