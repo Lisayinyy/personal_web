@@ -66,7 +66,7 @@ const I18N = {
     'vibe.products-title': 'What I Shipped 🚀',
     'vibe.products-sub':   'Real products, built from scratch with AI-assisted coding.',
 
-    'vibe.card1.tag':    '🔍 Monitoring Tool · ClawHub',
+    'vibe.card1.tag':    '🔍 Monitoring Skills · ClawHub',
     'vibe.card1.title':  'Xiaohongshu Sentiment Monitor',
     'vibe.card1.desc':   'Auto-search → page scraping → intelligent filtering → comment script generation → Feishu spreadsheet sync. A 3-layer pipeline that gets more human the longer it runs. Published to the ClawHub Skills Store.',
 
@@ -208,7 +208,7 @@ const I18N = {
     'vibe.products-title': '我做的产品 🚀',
     'vibe.products-sub':   '真实产品，从零开始用 AI 辅助编程打造。',
 
-    'vibe.card1.tag':    '🔍 监控工具 · ClawHub',
+    'vibe.card1.tag':    '🔍 监控 Skills · ClawHub',
     'vibe.card1.title':  '小红书舆论监控',
     'vibe.card1.desc':   '自动搜索 → 详情页抓取 → 智能筛选 → 生成评论话术 → 写入飞书表格。3 层去 AI 味流水线，越用越像真人。已发布到 ClawHub Skills 商店。',
 
