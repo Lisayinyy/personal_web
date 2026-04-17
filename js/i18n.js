@@ -66,9 +66,9 @@ const I18N = {
     'vibe.products-title': 'What I Shipped 🚀',
     'vibe.products-sub':   'Real products, built from scratch with AI-assisted coding.',
 
-    'vibe.card1.tag':    '🔍 Monitoring Tool',
+    'vibe.card1.tag':    '🔍 Monitoring Tool · ClawHub',
     'vibe.card1.title':  'Xiaohongshu Sentiment Monitor',
-    'vibe.card1.desc':   'Auto-search → page scraping → intelligent filtering → comment script generation → Feishu spreadsheet sync. A 3-layer pipeline that gets more human the longer it runs.',
+    'vibe.card1.desc':   'Auto-search → page scraping → intelligent filtering → comment script generation → Feishu spreadsheet sync. A 3-layer pipeline that gets more human the longer it runs. Published to the ClawHub Skills Store.',
 
     'vibe.card2.tag':    '🧠 Browser Extension',
     'vibe.card2.title':  'Web Summary Assistant',
@@ -77,6 +77,26 @@ const I18N = {
     'vibe.card3.tag':    '🎨 Personal Site',
     'vibe.card3.title':  'This Website',
     'vibe.card3.desc':   'The site you\'re reading right now is vibe coded. Claude + Impeccable design system, zero to deploy — fully AI-assisted.',
+
+    'vibe.card-skills.tag':    '🎯 AI Agent Store · Live',
+    'vibe.card-skills.title':  'Skills Master — AI Agent Skill Store',
+    'vibe.card-skills.desc':   '178 curated Agent skills across 8 scenarios — productivity, content creation, smart home, dev tools, and more. Smart scenario recommendations + one-click install. Anyone can unlock new abilities for their AI Agent.',
+
+    'vibe.card-prompt.tag':    '⚡ Prompt Tool · Chrome Store Live',
+    'vibe.card-prompt.title':  'PromptAI — AI Prompt Optimizer',
+    'vibe.card-prompt.desc':   'Type a rough idea → AI rewrites it into a pro prompt → one-click fill into 15+ AI platforms (ChatGPT, Claude, Kimi, DeepSeek, etc.). Live on Chrome Web Store with prompt history + insights.',
+
+    'vibe.card-influencer.tag':    '🚀 MiniMax Internal · Growth System',
+    'vibe.card-influencer.title':  'Influencer Management System',
+    'vibe.card-influencer.desc':   'An internal KOL outreach tool I built for MiniMax\'s product growth team — boosts day-to-day creator ops efficiency. <em>(Specifics are confidential — happy to chat in person.)</em>',
+
+    'vibe.card-monkey.tag':    '🐵 In Development · WIP',
+    'vibe.card-monkey.title':  'MonkeyAI',
+    'vibe.card-monkey.desc':   'New project in active development — repo is up, stay tuned.',
+
+    'vibe.card-vibeai.tag':    '📚 Learning Hub',
+    'vibe.card-vibeai.title':  'vibe.ai — AI Learning Hub',
+    'vibe.card-vibeai.desc':   'A curated resource hub for AI beginners. Tools, tutorials, case studies, best practices — your one-stop guide to vibe coding.',
 
     // ── PROJECTS ─────────────────────────────────────────────
     'projects.filter.all':     'All',
@@ -188,9 +208,9 @@ const I18N = {
     'vibe.products-title': '我做的产品 🚀',
     'vibe.products-sub':   '真实产品，从零开始用 AI 辅助编程打造。',
 
-    'vibe.card1.tag':    '🔍 监控工具',
+    'vibe.card1.tag':    '🔍 监控工具 · ClawHub',
     'vibe.card1.title':  '小红书舆论监控',
-    'vibe.card1.desc':   '自动搜索 → 详情页抓取 → 智能筛选 → 生成评论话术 → 写入飞书表格。3 层去 AI 味流水线，越用越像真人。',
+    'vibe.card1.desc':   '自动搜索 → 详情页抓取 → 智能筛选 → 生成评论话术 → 写入飞书表格。3 层去 AI 味流水线，越用越像真人。已发布到 ClawHub Skills 商店。',
 
     'vibe.card2.tag':    '🧠 浏览器插件',
     'vibe.card2.title':  'Web Summary Assistant',
@@ -199,6 +219,26 @@ const I18N = {
     'vibe.card3.tag':    '🎨 个人网站',
     'vibe.card3.title':  'This Website',
     'vibe.card3.desc':   '你正在看的这个网站就是 vibe coded 的。用 Claude + Impeccable 设计规范，从零到部署全程 AI 辅助。',
+
+    'vibe.card-skills.tag':    '🎯 AI Agent 商店 · 已上线',
+    'vibe.card-skills.title':  'Skills Master — AI Agent 技能商店',
+    'vibe.card-skills.desc':   '178 个精选 Agent 技能，覆盖效率办公、内容创作、智能家居、编程开发等 8 大场景。智能场景推荐 + 一键安装，让任何人都能给 AI Agent 解锁新能力。',
+
+    'vibe.card-prompt.tag':    '⚡ Prompt 工具 · Chrome Store 已上架',
+    'vibe.card-prompt.title':  'PromptAI — AI Prompt Optimizer',
+    'vibe.card-prompt.desc':   '输入粗糙想法 → AI 优化成专业 Prompt → 一键填充到 15+ AI 平台（ChatGPT、Claude、Kimi、DeepSeek 等）。Chrome 应用商店已上架，支持 Prompt 历史管理与洞察分析。',
+
+    'vibe.card-influencer.tag':    '🚀 MiniMax 内部 · Growth System',
+    'vibe.card-influencer.title':  'Influencer Management System',
+    'vibe.card-influencer.desc':   '为 MiniMax 产品增长团队搭建的内部 KOL 投放管理工具，提高达人运营效率。<em>（具体业务场景不便公开，欢迎面聊。）</em>',
+
+    'vibe.card-monkey.tag':    '🐵 开发中 · WIP',
+    'vibe.card-monkey.title':  'MonkeyAI',
+    'vibe.card-monkey.desc':   '待开发完成上线的新项目。代码仓库已建，敬请期待。',
+
+    'vibe.card-vibeai.tag':    '📚 学习资源',
+    'vibe.card-vibeai.title':  'vibe.ai — AI 学习集合',
+    'vibe.card-vibeai.desc':   '给想入门 AI 的人整理的资源集合网站。工具、教程、案例、最佳实践，一站式 vibe coding 起步指南。',
 
     // ── PROJECTS ─────────────────────────────────────────────
     'projects.filter.all':     '全部',
