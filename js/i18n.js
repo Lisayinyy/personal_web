@@ -54,14 +54,7 @@ const I18N = {
     'journey.d7.desc':   'Vibe coding new tools every week. Documenting AI growth methodology. Goal: help more non-technical people build with AI.',
 
     // ── VIBE CODING ──────────────────────────────────────────
-    'vibe.intro':        'I don\'t just write PRDs — I build prototypes myself with AI-assisted coding. Here\'s the workflow + the toolkit I use to ship products from zero.',
-
-    'vibe.step1.title':  'Idea → PRD',
-    'vibe.step1.desc':   'Start with a user problem. Write a quick PRD with AI to clarify scope, constraints, and success metrics.',
-    'vibe.step2.title':  'Prompt → Prototype',
-    'vibe.step2.desc':   'Feed the PRD to Claude/MiniMax. Iterate with natural language — describe what you want, review the code, refine.',
-    'vibe.step3.title':  'Ship → Measure',
-    'vibe.step3.desc':   'Deploy the MVP. Track real user behavior. Use data to decide what stays, what goes, what evolves.',
+    'vibe.intro':        'I don\'t just write PRDs — I build prototypes myself with AI-assisted coding. Here\'s the toolkit I use to ship products from zero.',
 
     'vibe.toolkit.title':  '🧰 My AI Toolkit',
 
@@ -156,14 +149,7 @@ const I18N = {
     'journey.d7.desc':   '每周 vibe code 新工具，把 AI 产品增长方法论写成笔记分享。目标：让更多非技术背景的人也能用 AI 做产品。',
 
     // ── VIBE CODING ──────────────────────────────────────────
-    'vibe.intro':        '我不只是写 PRD — 我自己用 AI 辅助编程做原型。这是我从零做产品的工作流和工具箱。',
-
-    'vibe.step1.title':  'Idea → PRD',
-    'vibe.step1.desc':   '从用户问题出发，用 AI 快速写 PRD，明确范围、约束条件和成功指标。',
-    'vibe.step2.title':  'Prompt → Prototype',
-    'vibe.step2.desc':   '把 PRD 喂给 Claude/MiniMax，用自然语言迭代——描述你想要的，审查代码，继续打磨。',
-    'vibe.step3.title':  'Ship → Measure',
-    'vibe.step3.desc':   '上线 MVP，追踪真实用户行为，用数据决定什么留、什么改、什么砍掉。',
+    'vibe.intro':        '我不只是写 PRD — 我自己用 AI 辅助编程做原型。这是我从零做产品的工具箱。',
 
     'vibe.toolkit.title':  '🧰 我的 AI 工具箱',
 
