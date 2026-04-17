@@ -63,7 +63,7 @@ const I18N = {
     'vibe.step3.title':  'Ship → Measure',
     'vibe.step3.desc':   'Deploy the MVP. Track real user behavior. Use data to decide what stays, what goes, what evolves.',
 
-    'vibe.toolkit.title':  '🧰 My Toolkit',
+    'vibe.toolkit.title':  '🧰 My AI Toolkit',
 
     // ── PROJECTS ─────────────────────────────────────────────
     'projects.filter.all':     'All',
@@ -89,11 +89,11 @@ const I18N = {
 
 
     // ── TOOLKIT ──────────────────────────────────────────────
-    'toolkit.claude.note':    '· Code generation',
-    'toolkit.cursor.note':    '· Code editor',
-    'toolkit.openclaw.note':  '· AI assistant',
-    'toolkit.impeccable.note':'· Design',
-    'toolkit.github.note':    '· Deploy',
+    'toolkit.cat.agents':     'Agents',
+    'toolkit.cat.models':     'Models',
+    'toolkit.cat.tools':      'AI Tools',
+    'toolkit.cat.stack':      'Stack',
+    'toolkit.tool.jimeng':    'Jimeng',
 
     // ── RESUME ───────────────────────────────────────────────
     'resume.title':      'Full Resume',
@@ -165,7 +165,7 @@ const I18N = {
     'vibe.step3.title':  'Ship → Measure',
     'vibe.step3.desc':   '上线 MVP，追踪真实用户行为，用数据决定什么留、什么改、什么砍掉。',
 
-    'vibe.toolkit.title':  '🧰 我的工具箱',
+    'vibe.toolkit.title':  '🧰 我的 AI 工具箱',
 
     // ── PROJECTS ─────────────────────────────────────────────
     'projects.filter.all':     '全部',
@@ -191,11 +191,11 @@ const I18N = {
 
 
     // ── TOOLKIT ──────────────────────────────────────────────
-    'toolkit.claude.note':    '· 写代码',
-    'toolkit.cursor.note':    '· 编辑器',
-    'toolkit.openclaw.note':  '· AI 助手',
-    'toolkit.impeccable.note':'· 设计',
-    'toolkit.github.note':    '· 部署',
+    'toolkit.cat.agents':     '智能体',
+    'toolkit.cat.models':     '大模型',
+    'toolkit.cat.tools':      'AI 工具',
+    'toolkit.cat.stack':      '技术栈',
+    'toolkit.tool.jimeng':    '即梦',
 
     // ── RESUME ───────────────────────────────────────────────
     'resume.title':      '完整简历',
