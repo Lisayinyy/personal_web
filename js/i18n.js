@@ -238,6 +238,17 @@ const I18N = {
     // Update <html lang="...">
     document.documentElement.lang = lang;
 
+    // Swap Resume PDF link based on language
+    const resumeLink = document.getElementById('resume-download');
+    if (resumeLink) {
+      resumeLink.setAttribute(
+        'href',
+        lang === 'zh'
+          ? './images/Lisa_Yin_Resume_ZH.pdf'
+          : './images/Lisa_Yin_Resume_EN.pdf'
+      );
+    }
+
     // Update slash toggle appearance
     const toggle = document.getElementById('lang-toggle');
     if (toggle) {
