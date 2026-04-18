@@ -33,21 +33,25 @@ const I18N = {
     'journey.d2.title':  'AI4ALL@BU · AI Research',
     'journey.d2.desc':   'First hands-on AI research project. Realized AI shouldn\'t live only in papers — it needs to become products.',
 
-    'journey.d3.date':   '2024',
-    'journey.d3.title':  'First time coding with ChatGPT',
-    'journey.d3.desc':   'Used GPT to write code for my senior capstone. Productivity doubled overnight. Fell headfirst into AI-assisted coding.',
+    'journey.d3.date':   '2024.4 – 2024.11',
+    'journey.d3.title':  'GlobeZ Startup · First Vibe Coding',
+    'journey.d3.desc':   'Built an AI-driven Shopify cross-border platform with Cursor — months before "vibe coding" had a name. A/B tested user flows, ran clustering on user needs (+20% retention), wrote SQL queries against Google Analytics. This is where I learned shipping ≠ writing code alone.',
+
+    'journey.dDeloitte.date':   '2024.12 – 2025.3',
+    'journey.dDeloitte.title':  'Deloitte · AI Agent for Finance Research',
+    'journey.dDeloitte.desc':   'Built industry-research Agents on Coze/Dify for banking, securities, and PE clients. Modeled credit-card customer satisfaction with NLP. Proved AI PMs ship by building, not just writing PRDs.',
 
     'journey.d4.date':   '2025.2',
     'journey.d4.title':  '🔥 Went All-in on Vibe Coding',
     'journey.d4.desc':   'Karpathy coined "vibe coding." I embraced it with Claude Code + Cursor. Non-engineers can now ship products — and I do.',
 
     'journey.d5.date':   '2025.4 – 2025.9',
-    'journey.d5.title':  'AI Investor · Zhenge → Qiji',
+    'journey.d5.title':  'AI Investor · Qiji → ZhenFund',
     'journey.d5.desc':   'Reviewed 100+ AI startups. Learned the investment logic behind LLM infra, multimodal, and vertical applications. Gained a sharp sense of what makes a great AI product.',
 
     'journey.d6.date':   '2025.9',
-    'journey.d6.title':  'Joined MiniMax · AI PM',
-    'journey.d6.desc':   'Moved from investing to building. Started vibe coding internal tools — Xiaohongshu sentiment monitoring, growth automation. AI PMs don\'t just write PRDs; they build.',
+    'journey.d6.title':  'MiniMax · AI PM + UCLA Master\'s',
+    'journey.d6.desc':   'Moved from investing to building. Started vibe coding internal tools — Xiaohongshu sentiment monitoring, growth automation. In parallel: enrolled at UCLA for an MS in Business Analytics. AI PMs don\'t just write PRDs; they build.',
 
     'journey.d7.date':   'Now · 2026',
     'journey.d7.title':  'Shipping & Building 🚀',
@@ -64,7 +68,6 @@ const I18N = {
     'projects.filter.coding':  'Engineering',
     'projects.filter.design':  'Design',
 
-    'projects.p1.desc':  'The site you\'re reading right now. Built with Claude + Impeccable design system, zero to deploy — fully AI-assisted.',
     'projects.p2.desc':  'AI-powered browser extension that summarises pages for faster reading and research.',
     'projects.p3.desc':  'Full mobile UX for a food-waste reduction platform — research, wireframes, interactive prototype.',
     'projects.p4.desc':  'Accessibility audit and redesign for an e-commerce art supply site, making it usable for everyone.',
@@ -128,21 +131,25 @@ const I18N = {
     'journey.d2.title':  'AI4ALL@BU · AI 研究',
     'journey.d2.desc':   '第一次做 AI 研究项目。意识到 AI 不应该只待在论文里，开始想怎么做成产品。',
 
-    'journey.d3.date':   '2024',
-    'journey.d3.title':  '第一次用 ChatGPT 写代码',
-    'journey.d3.desc':   '做毕设的时候第一次用 GPT 辅助写代码，效率直接翻倍。从此入坑 AI-assisted coding。',
+    'journey.d3.date':   '2024.4 – 2024.11',
+    'journey.d3.title':  'GlobeZ Startup · 第一次 Vibe Coding',
+    'journey.d3.desc':   '用 Cursor 做了一个 AI 驱动的 Shopify 跨境电商平台 — 那时候 vibe coding 这个词都还没出现。A/B 测交互链路、聚类算法分析用户需求（留存率 +20%）、用 SQL 跑 Google Analytics。让我第一次理解：发布产品 ≠ 自己写代码。',
+
+    'journey.dDeloitte.date':   '2024.12 – 2025.3',
+    'journey.dDeloitte.title':  '德勤 · AI Agent 行研',
+    'journey.dDeloitte.desc':   '在 Coze/Dify 上为银行、券商、私募客户搭行研 Agent。用 NLP 给信用卡客户满意度建模。证明了 AI PM 不是写 PRD，是 build 产品。',
 
     'journey.d4.date':   '2025.2',
     'journey.d4.title':  '🔥 开始 Vibe Coding',
     'journey.d4.desc':   'Karpathy 提出 vibe coding 概念。开始用 Claude Code + Cursor 全面 AI 辅助编程，非开发背景也能做产品了。',
 
     'journey.d5.date':   '2025.4 – 2025.9',
-    'journey.d5.title':  'AI 投资人 · 真格 → 奇绩',
+    'journey.d5.title':  'AI 投资人 · 奇绩 → 真格',
     'journey.d5.desc':   '看了 100+ AI 创业项目，搞懂了 LLM 基建、多模态、垂直应用的投资逻辑。知道什么是好的 AI 产品。',
 
     'journey.d6.date':   '2025.9',
-    'journey.d6.title':  '加入 MiniMax · AI PM',
-    'journey.d6.desc':   '从投资转产品。开始用 vibe coding 做内部工具——小红书舆情监控、增长自动化。AI PM 不只写 PRD，还自己 build。',
+    'journey.d6.title':  'MiniMax · AI PM + UCLA 硕士',
+    'journey.d6.desc':   '从投资转产品。开始用 vibe coding 做内部工具——小红书舆情监控、增长自动化。同时入读 UCLA 商业分析硕士。AI PM 不只写 PRD，还自己 build。',
 
     'journey.d7.date':   'Now · 2026',
     'journey.d7.title':  'Shipping & Building 🚀',
@@ -159,7 +166,6 @@ const I18N = {
     'projects.filter.coding':  '工程',
     'projects.filter.design':  '设计',
 
-    'projects.p1.desc':  '你正在看的这个网站。用 Claude + Impeccable 设计规范，从零到部署全程 AI 辅助。',
     'projects.p2.desc':  'AI 驱动的浏览器扩展，一键摘要网页，加速阅读与调研。',
     'projects.p3.desc':  '食物浪费减少平台的完整移动端 UX——用研、线框图、可交互原型。',
     'projects.p4.desc':  '对艺术用品电商网站进行无障碍审查与改版，让每个人都能顺畅使用。',
