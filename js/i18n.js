@@ -80,7 +80,7 @@ const I18N = {
     'projects.vibe-xhs.desc':        'Auto-search → page scraping → intelligent filtering → comment script generation → Feishu spreadsheet sync. Published to ClawHub Skills Store.',
     'projects.vibe-prompt.desc':     'Type a rough idea → AI rewrites it into a pro prompt → one-click fill into 15+ AI platforms (ChatGPT, Claude, Kimi, DeepSeek). Live on Chrome Web Store.',
     'projects.vibe-influencer.desc': 'An internal KOL outreach tool I built for MiniMax\'s product growth team — boosts day-to-day creator ops efficiency.',
-    'projects.vibe-monkey.desc':     'New project in active development — repo is up, stay tuned.',
+    'projects.vibe-monkey.desc':     'A personal investment app — built for myself to track positions, P&L, and trade ideas. In active development.',
     'projects.vibe-vibeai.desc':     'A curated resource hub for AI beginners. Tools, tutorials, case studies, best practices — your one-stop guide to vibe coding.',
 
 
@@ -178,7 +178,7 @@ const I18N = {
     'projects.vibe-xhs.desc':        '自动搜索 → 详情页抓取 → 智能筛选 → 生成评论话术 → 写入飞书表格。已发布到 ClawHub Skills 商店。',
     'projects.vibe-prompt.desc':     '输入粗糙想法 → AI 优化成专业 Prompt → 一键填充到 15+ AI 平台（ChatGPT、Claude、Kimi、DeepSeek 等）。Chrome 应用商店已上架。',
     'projects.vibe-influencer.desc': '为 MiniMax 产品增长团队搭建的内部 KOL 投放管理工具，提高达人运营效率。',
-    'projects.vibe-monkey.desc':     '开发中的新项目 — 代码仓库已建，敬请期待。',
+    'projects.vibe-monkey.desc':     '一个自用的个人投资管理 App — 用来记录持仓、盈亏和交易想法。开发中。',
     'projects.vibe-vibeai.desc':     '给想入门 AI 的人整理的资源集合网站。工具、教程、案例、最佳实践，一站式 vibe coding 起步指南。',
 
 
