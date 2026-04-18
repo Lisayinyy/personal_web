@@ -46,7 +46,7 @@ const I18N = {
     'journey.d4.desc':   'Karpathy coined "vibe coding." I embraced it with Claude Code + Cursor. Non-engineers can now ship products — and I do.',
 
     'journey.d5.date':   '2025.4 – 2025.9',
-    'journey.d5.title':  'AI Investor · Qiji → ZhenFund',
+    'journey.d5.title':  'AI Investor · Qi Ji → ZhenFund',
     'journey.d5.desc':   'Reviewed 100+ AI startups. Learned the investment logic behind LLM infra, multimodal, and vertical applications. Gained a sharp sense of what makes a great AI product.',
 
     'journey.d6.date':   '2025.9',
@@ -79,7 +79,7 @@ const I18N = {
     'projects.vibe-skills.desc':     '178 curated Agent skills across 8 scenarios. Smart recommendations + one-click install — anyone can unlock new abilities for their AI Agent.',
     'projects.vibe-xhs.desc':        'Auto-search → page scraping → intelligent filtering → comment script generation → Feishu spreadsheet sync. Published to ClawHub Skills Store.',
     'projects.vibe-prompt.desc':     'Type a rough idea → AI rewrites it into a pro prompt → one-click fill into 15+ AI platforms (ChatGPT, Claude, Kimi, DeepSeek). Live on Chrome Web Store.',
-    'projects.vibe-influencer.desc': 'An internal KOL outreach tool I built for MiniMax\'s product growth team — boosts day-to-day creator ops efficiency. <em>(Specifics confidential — happy to chat in person.)</em>',
+    'projects.vibe-influencer.desc': 'An internal KOL outreach tool I built for MiniMax\'s product growth team — boosts day-to-day creator ops efficiency.',
     'projects.vibe-monkey.desc':     'New project in active development — repo is up, stay tuned.',
     'projects.vibe-vibeai.desc':     'A curated resource hub for AI beginners. Tools, tutorials, case studies, best practices — your one-stop guide to vibe coding.',
 
@@ -177,7 +177,7 @@ const I18N = {
     'projects.vibe-skills.desc':     '178 个精选 Agent 技能，覆盖 8 大场景。智能场景推荐 + 一键安装 — 让任何人都能给 AI Agent 解锁新能力。',
     'projects.vibe-xhs.desc':        '自动搜索 → 详情页抓取 → 智能筛选 → 生成评论话术 → 写入飞书表格。已发布到 ClawHub Skills 商店。',
     'projects.vibe-prompt.desc':     '输入粗糙想法 → AI 优化成专业 Prompt → 一键填充到 15+ AI 平台（ChatGPT、Claude、Kimi、DeepSeek 等）。Chrome 应用商店已上架。',
-    'projects.vibe-influencer.desc': '为 MiniMax 产品增长团队搭建的内部 KOL 投放管理工具，提高达人运营效率。<em>（具体业务场景不便公开，欢迎面聊。）</em>',
+    'projects.vibe-influencer.desc': '为 MiniMax 产品增长团队搭建的内部 KOL 投放管理工具，提高达人运营效率。',
     'projects.vibe-monkey.desc':     '开发中的新项目 — 代码仓库已建，敬请期待。',
     'projects.vibe-vibeai.desc':     '给想入门 AI 的人整理的资源集合网站。工具、教程、案例、最佳实践，一站式 vibe coding 起步指南。',
 
