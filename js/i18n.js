@@ -244,8 +244,8 @@ const I18N = {
       resumeLink.setAttribute(
         'href',
         lang === 'zh'
-          ? './images/Lisa_Yin_Resume_ZH.pdf'
-          : './images/Lisa_Yin_Resume_EN.pdf'
+          ? './images/Lisa_Yin_Resume_ZH_v2.pdf'
+          : './images/Lisa_Yin_Resume_EN_v2.pdf'
       );
     }
 
