@@ -50,7 +50,7 @@ const I18N = {
     'journey.d5.desc':   'Reviewed 100+ AI startups. Learned the investment logic behind LLM infra, multimodal, and vertical applications. Gained a sharp sense of what makes a great AI product.',
 
     'journey.d6.date':   '2025.9',
-    'journey.d6.title':  'Joined MiniMax · AI PM',
+    'journey.d6.title':  'Joined MiniMax · AI PM/Growth',
     'journey.d6.desc':   'Moved from investing to building. Started vibe coding internal tools — Xiaohongshu sentiment monitoring, growth automation. AI PMs don\'t just write PRDs; they build.',
 
     'journey.d7.date':   'Now · 2026',
@@ -148,7 +148,7 @@ const I18N = {
     'journey.d5.desc':   '看了 100+ AI 创业项目，搞懂了 LLM 基建、多模态、垂直应用的投资逻辑。知道什么是好的 AI 产品。',
 
     'journey.d6.date':   '2025.9',
-    'journey.d6.title':  '加入 MiniMax · AI PM',
+    'journey.d6.title':  '加入 MiniMax · AI PM/Growth',
     'journey.d6.desc':   '从投资转产品。开始用 vibe coding 做内部工具——小红书舆情监控、增长自动化。AI PM 不只写 PRD，还自己 build。',
 
     'journey.d7.date':   'Now · 2026',
