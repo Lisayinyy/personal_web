@@ -98,7 +98,6 @@ const I18N = {
     'resume.linkedin':   '<i class="fa-brands fa-linkedin"></i> LinkedIn',
 
     // ── FOOTER ───────────────────────────────────────────────
-    'footer.loc':        'Los Angeles, CA',
     'footer.copy':       '© 2025 Lisa Yin',
   },
 
@@ -196,7 +195,6 @@ const I18N = {
     'resume.linkedin':   '<i class="fa-brands fa-linkedin"></i> LinkedIn',
 
     // ── FOOTER ───────────────────────────────────────────────
-    'footer.loc':        '洛杉矶，加利福尼亚州',
     'footer.copy':       '© 2025 Lisa Yin',
   }
 };
