@@ -179,3 +179,12 @@
   // Set first node as active by default
   if (nodes[0]) nodes[0].classList.add('active');
 })();
+
+/* ── Hero photo flip card: tap-to-flip on touch devices ──── */
+(function () {
+  const card = document.querySelector('.hero-photo-col');
+  if (!card) return;
+  card.addEventListener('click', () => {
+    card.classList.toggle('is-flipped');
+  });
+})();
