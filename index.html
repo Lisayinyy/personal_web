@@ -297,7 +297,7 @@ html.js .reveal{opacity:0} html.js [data-stagger]>*{opacity:0}
     <div class="endcta-panel reveal">
       <span class="status"><span class="dot"></span><span data-i18n="end.status">Available for new opportunities</span></span>
       <h2 data-i18n="end.h">Let&rsquo;s build your<br>next <em>AI product</em>.</h2>
-      <a class="endcta-btn" href="mailto:lisayyyin@gmail.com" data-i18n="end.btn">Get in touch</a><a class="endcta-btn2" href="resume.pdf" target="_blank" rel="noopener" target="_blank" data-i18n="end.cv">View résumé</a>
+      <a class="endcta-btn" href="mailto:lisayyyin@gmail.com" data-i18n="end.btn">Get in touch</a><a class="endcta-btn2" href="resume_en.pdf" target="_blank" rel="noopener" data-resume-link data-i18n="end.cv">View résumé</a>
     </div>
   </div>
   <div class="bigname" aria-hidden="true">LISA&nbsp;YIN</div>
@@ -308,7 +308,7 @@ html.js .reveal{opacity:0} html.js [data-stagger]>*{opacity:0}
         <a href="https://www.linkedin.com/in/yuanyuan-yin-935186201/" target="_blank">LinkedIn</a>
         <a href="https://github.com/Lisayinyy" target="_blank">GitHub</a>
         <a href="mailto:lisayyyin@gmail.com" data-i18n="foot.email">Email</a>
-        <a href="resume.pdf" target="_blank" rel="noopener" target="_blank" data-i18n="foot.resume">Resume</a>
+        <a href="resume_en.pdf" target="_blank" rel="noopener" data-resume-link data-i18n="foot.resume">Resume</a>
       </span>
     </div>
   </footer>
@@ -384,6 +384,9 @@ function applyLang(lang){
   document.querySelectorAll('[data-i18n]').forEach(function(el){
     var v=I18N[el.getAttribute('data-i18n')]; if(!v||v[lang]==null) return;
     if(el.tagName.toLowerCase()==='textpath'){ el.textContent=v[lang]; } else { el.innerHTML=v[lang]; }
+  });
+  document.querySelectorAll('[data-resume-link]').forEach(function(link){
+    link.setAttribute('href', lang==='zh' ? 'resume.pdf' : 'resume_en.pdf');
   });
   document.documentElement.setAttribute('lang', lang);
   localStorage.setItem('lisa-lang', lang);
