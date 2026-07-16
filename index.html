@@ -4,6 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Lisa Yin — AI Product Manager / Vibe Coder</title>
+<link rel="icon" href="data:,">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,300;1,9..144,400;1,9..144,500&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,400&display=swap" rel="stylesheet">
@@ -175,6 +176,99 @@ html.js .reveal{opacity:0} html.js [data-stagger]>*{opacity:0}
   .closer-circle .curveh{font-size:32px}.endcta-panel{padding:60px 22px 70px;border-radius:30px}.endcta-panel h2{font-size:44px}.bigname{font-size:clamp(44px,18vw,90px)}.svc{width:116px;height:116px;font-size:16px}.work-thumb{display:none}
 }
 @media(prefers-reduced-motion:reduce){*{animation:none!important}}
+
+/* Refined mobile layout --------------------------------------------------
+   The original 900px breakpoint keeps the desktop art direction, while
+   these rules make the composition comfortable on narrow phone screens. */
+@media (max-width: 600px){
+  :root{--phone-pad:18px}
+  body{font-size:16px;overflow-x:hidden}
+  .wrap{padding-inline:var(--phone-pad)}
+
+  .nav{top:12px;padding-inline:10px;gap:8px}
+  .nav-logo{gap:8px;padding:9px 13px 9px 12px}
+  .nav-logo .mark{font-size:18px}
+  .nav-logo .role{font-size:11px;min-width:0;white-space:nowrap}
+  .nav-pills{padding:3px}
+  .nav-pills a.cta,.langtog{font-size:12px;padding:8px 11px}
+
+  .scene{height:255vh;height:255svh}
+  .scene-pin{height:100vh;height:100svh;min-height:560px}
+  .bowl{top:38vh;width:145svh;height:145svh}
+  .ball{width:min(320px,82vw);height:min(320px,82vw)}
+  .hero-name{font-size:clamp(60px,18vw,74px)}
+  .hero-eyebrow{font-size:18px}
+  .hero-sub{margin-top:14px;font-size:clamp(15px,4vw,19px);white-space:nowrap}
+  .mani{width:calc(100% - 32px);top:49%}
+  .mani p{font-size:clamp(26px,7.8vw,34px);line-height:1.12}
+  .mani .u{white-space:normal}
+  .scrollhint{bottom:24px;font-size:10px;letter-spacing:.14em}
+
+  .about{padding:52px 0 74px}
+  .about-h{font-size:clamp(42px,12vw,52px)}
+  .about-pill{margin-top:20px;padding:9px 22px;font-size:19px}
+  .about-bio p{font-size:16px;line-height:1.65}
+  .about-photos{height:500px;margin-top:16px}
+  .about-circle{top:76px;width:min(360px,92vw);height:min(360px,92vw)}
+  .about-bgtext{top:26px!important;width:100%!important;max-width:100%!important;height:auto!important}
+  .photo-main{left:5%;top:8px;width:min(230px,64vw);height:300px}
+  .photo-card{right:2%;top:190px;width:min(205px,58vw);padding:20px 18px}
+  .photo-card .q{font-size:19px}
+  .photo-card .a{font-size:11px}
+
+  .sec{padding:70px 0}
+  .sec-h{font-size:clamp(36px,10vw,44px)}
+  .work .eyebrow{margin-bottom:28px}
+  .work-list{gap:24px}
+  .work-item .t{font-size:clamp(34px,10.5vw,44px);line-height:1.05}
+  .work-item .r{font-size:13px;line-height:1.45}
+
+  .panel,.exp-panel{padding:34px 20px;border-radius:26px}
+  .work-grid,.exp-grid{gap:30px}
+  .work-grid .tag{font-size:17px;padding:8px 18px}
+  .work-grid .quote{font-size:16px;line-height:1.6}
+  .vcard{padding:22px 24px;font-size:19px}
+  .exp-list{gap:26px}
+  .exp-row .name{font-size:28px}
+  .exp-row .pills{gap:7px;margin-top:9px}
+  .pill-solid,.pill-out{font-size:12px;padding:7px 12px}
+  .exp-desc{font-size:14px;line-height:1.55}
+  .exp-tags span{font-size:11px;padding:4px 9px}
+
+  .tools-h{font-size:30px}
+  .mq{margin-top:38px;gap:14px}
+  .tpill{font-size:17px;padding:10px 18px}
+
+  .closer{padding-top:18px}
+  .closer-stage{height:560px}
+  .closer-circle{top:92px;width:760px;max-width:190%;height:760px}
+  .closer-arc{top:38px;width:820px;height:360px}
+  .closer-arc text{font-size:32px}
+  .svc-bubble{width:clamp(92px,26vw,132px);height:clamp(92px,26vw,132px);font-size:14px;padding:9px}
+
+  .endcta{padding-top:18px}
+  .endcta-panel{padding:54px 18px 58px;border-radius:26px}
+  .endcta-panel .status{font-size:11px;padding:8px 13px;margin-bottom:22px}
+  .endcta-panel h2{font-size:clamp(34px,10.5vw,44px)}
+  .endcta-btn,.endcta-btn2{display:flex;justify-content:center;width:100%;margin:28px 0 0;padding:15px 22px;font-size:14px}
+  .endcta-btn2{margin-top:12px}
+  .bigname{font-size:clamp(44px,18vw,82px);margin:36px 0 -3px}
+  .foot2{padding:22px 0 28px}
+  .foot2 .wrap{justify-content:center;text-align:center;gap:14px}
+  .foot2 .c{font-size:12px}
+  .foot2 .ic{gap:14px;justify-content:center;flex-wrap:wrap}
+  .foot2 .ic a{font-size:12px}
+}
+
+@media (max-width: 380px){
+  .nav-logo .role{display:none}
+  .nav-logo{padding-right:12px}
+  .hero-name{font-size:60px}
+  .hero-sub{font-size:14px}
+  .photo-main{width:210px;height:274px}
+  .photo-card{top:176px;width:190px}
+  .svc-bubble{font-size:13px}
+}
 </style>
 </head>
 <body>
@@ -283,7 +377,7 @@ html.js .reveal{opacity:0} html.js [data-stagger]>*{opacity:0}
   <div class="wrap"><div class="eyebrow reveal" style="text-align:center" data-i18n="closer.eyebrow">What I do</div></div>
   <div class="closer-stage">
     <div class="closer-circle"></div>
-    <svg class="closer-arc" viewBox="0 0 1280 560"><defs><path id="carc" d="M 80,540 A 580,580 0 0,1 1200,540"/></defs><text><textPath href="#carc" startOffset="3.5%" data-i18n="closer.arc">Let’s see what we can build together</textPath></text></svg>
+    <svg class="closer-arc" viewBox="0 0 1280 560"><defs><path id="carc" d="M 80,540 A 580,580 0 0,1 1200,540"/></defs><text text-anchor="middle"><textPath href="#carc" startOffset="50%" data-i18n="closer.arc">Let’s see what we can build together</textPath></text></svg>
     <div class="svc-bubble bub" data-i18n="svc1" style="left:33%;top:52%;--s:174px">AI Product<br>Management</div>
     <div class="svc-bubble bub" data-i18n="svc2" style="left:55%;top:44%;--s:150px">Vibe<br>Coding</div>
     <div class="svc-bubble bub" data-i18n="svc3" style="left:48%;top:73%;--s:158px">Data<br>Science</div>
